@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <a href="accueil.html"><img src="../img/logovf-png.png" class="logo" alt="Logo_resto" width="10%" height="10%"></a>
+        <nav>
+            <a href="../html/accueil.html">Accueil</a>
+            <a href="../html/menu.html">Menu</a>
+            <a href="../html/reservations.html">Réservations</a>
+            <a href="../html/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <section class="contact-info">
+                <h1>Contactez-nous</h1>
+                <p>Adresse : 56 Bd de la Cor d'Or, 06590 Théoule-sur-Mer</p>
+                <p>Téléphone : +33 4 93 00 00 00</p>
+                <p>Email : contact@lelagonlounge.fr</p>
+            </section>
+
+            <section class="contact-form">
+                <h2>Envoyez-nous un message</h2>
+                <form action="submit_contact_form.php" method="post">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+
+            <section class="map">
+                <h2>Où nous trouver</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.8346134932435!2d6.9534791!3d43.50578559999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce837cd1672acb%3A0x9b4af5c3260b2d33!2sCrique%20de%20l&#39;Aiguille!5e0!3m2!1sfr!2sfr!4v1716447008323!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            ©️2024 Le Lagon Lounge <br>
+            Tous droits réservés
+        </p>
+    </footer>
+</body>
+</html>
