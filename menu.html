@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/marche-aux-poissons.png" type="image/x-icon">
+    <script src="../js/menu.js" async></script>
+    <script src="../js/barre.js" defer></script>
+    <script src="../js/subscribe.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="slides slide1">
+            <header>
+                <a href="../html/accueil.html" class="logo" ><img src="../img/logovf-png.png" alt="logo"></a>
+                <div class="navigation">
+                    <div class="navigation-items">
+                        <a href="../html/accueil.html">Accueil</a>
+                        <a href="../html/menu.html">Menu</a>
+                        <a href="../html/reservations.html">Réservation</a>
+                        <a href="../html/avis.html">Avis</a>
+                        <a href="../html/recrutement.html">Recrutement</a>
+                        <a href="../html/contact.html">Contact</a>
+                    </div>
+                    <button id="menu-button" class="button-barre">
+                        <img src="../img/icons8-menu-50(1).png" alt="Menu" />
+                    </button>
+                    <button id="close-button" class="button-barre hidden">
+                        <img src="../img/icons8-close-50.png" alt="Fermer" />
+                    </button>  
+                </div>
+            </header>
+            <section class="home">
+                <video class="video-slide" src="../video/3296402-uhd_4096_2160_25fps.mp4" autoplay muted loop ></video>
+                <div class="content">
+                    <h1>Découvrez notre <br><span>Menu</span></h1>
+                    <br> <br>
+                    <p>Un menu de saison concocté avec passion où chaque plat vous invitera à un voyage culinaire unique</p>
+                    <a href="../html/contact.html">Nous contacter</a>
+                </div>
+            </section>
+        </div>
+        <div class="slides slide2">
+            <main>
+                <div id="brochure">
+                    <div class="decorative-line"></div>
+                    <h1>Nos Cartes</h1>
+                    <div class="decorative-line"></div>
+                <div class="menu-buttons">
+                    <button onclick="showPDF('../pdf/Menu.pdf')">MENU DE SAISON</button>
+                    <button onclick="showPDF('../pdf/Cartevins.pdf')">CARTE DES VINS</button>
+                </div>
+                <div id="default-content">
+                    <div id="menu-default" style="display: block;">
+                        <p> 
+                            Venez nous rejoindre pour une escapade gastronomique ensoleillée au cœur de la Côte d’Azur. <br>
+                            Chaque plat de notre menu est une invitation à découvrir les saveurs authentiques et les produits frais de la région. Concoctés avec passion par notre chef Romain, nos mets raviront vos papilles et éveilleront vos sens.
+                            Notre cuisine se distingue par l'harmonie parfaite entre tradition et innovation. Chaque bouchée vous transportera dans un univers de goût unique, où chaque ingrédient est sélectionné avec soin pour vous offrir une expérience culinaire mémorable.
+                            <br>
+                            Laissez-vous séduire par notre menu de saison, où chaque plat raconte une histoire et vous invite à un voyage gustatif unique, célébrant la richesse et la diversité de la gastronomie méditerranéenne.
+                        </p>
+                    </div>
+                </div>
+                <!-- C'est notre frame pdf -->
+                <div class="pdf-container" id="pdf-container" style="display: none;">
+                    <iframe id="pdf-frame" src=""></iframe>
+                </div>
+            </main>
+        </div>
+        <div class="slides slide5">
+            <section class="letter">
+                <div class="letter-head">
+                    <h2>Subscribe <span>Newsletter</span></h2>
+                </div>
+                <div class="letter-input">
+                    <div>
+                        <input type="email" id ="emailInput" placeholder="Example@gmail.com">
+                    </div>
+                    <button class="red_btn" id="subscribeBtn">Subscribe</button>
+                </div>
+                <p id="message"></p>
+            </section>
+            <footer>
+                <div class="waves">
+                    <div class="wave" id="waves1"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="../html/accueil.html">Accueil</a></li>
+                    <li><a href="../html/menu.html">Menu</a></li>
+                    <li><a href="../html/reservations.html">Reservation</a></li>
+                    <li><a href="../html/avis.html">Avis</a></li>
+                    <li><a href="../html/recrutement.html">Recrutement</a></li>
+                    <li><a href="../html/contact.html">Contact</a></li>
+                </ul>
+                <div class="footer-content">
+                    <div class="bloc1">
+                        <p>Pour votre santé, pratiquez une activité physique régulière – <a href="https://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a></p>
+                    </div>
+                    <div class="bloc2">
+                        <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+                    </div>
+                </div>
+                <p>Email: <a href="mailto:lagoonLoung@gmail.com">lagoonLoung@gmail.com</a></p>
+                <p>©️2024 David Verrier & Enzo Gonzalez<br/>Tous droits réservés.</p>
+            </footer>
+        </div>
+    </div>
+   
+
+    <script type="text/javascript">
+        const logo = document.querySelector(".logo img");
+        const nav = document.querySelector(".navigation-items")
+        let content = document.querySelector(".home .content")
+    
+        window.addEventListener('load', () => {
+            logo.style.transform = "translateY(0)";
+            nav.style.transform = "translateY(0)";
+            setTimeout(() =>{
+                content.style.transform = "translateY(0)";
+                content.style.opacity = "1";
+            },500);
+        });
+        </script>
+    
+</body>
+</html>

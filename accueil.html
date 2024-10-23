@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/barre.js" defer></script>
+    <script src="../js/subscribe.js" defer> </script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../img/marche-aux-poissons.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="slides slide1">
+            <header>
+                <a href="../html/accueil.html" class="logo" ><img src="../img/logovf-png.png" alt="logo"></a>
+                <div class="navigation">
+                    <div class="navigation-items">
+                        <a href="../html/accueil.html">Accueil</a>
+                        <a href="../html/menu.html">Menu</a>
+                        <a href="../html/reservations.html">Réservation</a>
+                        <a href="../html/avis.html">Avis</a>
+                        <a href="../html/recrutement.html">Recrutement</a>
+                        <a href="../html/contact.html">Contact</a>
+                    </div>  
+                    <button id="menu-button" class="button-barre">
+                        <img src="../img/icons8-menu-50(1).png" alt="Menu" />
+                    </button>
+                    <button id="close-button" class="button-barre hidden">
+                        <img src="../img/icons8-close-50.png" alt="Fermer" />
+                    </button>
+                </div>
+            </header>
+            <section class="home">
+                <video class="video-slide" src="../video/8995472-hd_1920_1080_30fps.mp4" autoplay muted loop></video>
+                <div class="content">
+                    <h1>Bienvenue au <br><span>Lagon Lounge</span></h1>
+                    <br> <br>
+                    <a href="../html/contact.html">Nous contacter</a>
+                </div>
+            </section>
+        </div>
+        <div class="slides slide2">
+            <div class="arrow l" onclick="prev()">
+                <img src="../img/fleche_gauche.png" alt="l">
+            </div>
+            <div class="diapo slide-1">
+                <video class="video-slide" src="../video/5230367-hd_1920_1080_25fps.mp4" autoplay muted loop></video>
+                    <div class="caption">
+                        <h3>Mojito</h3>
+                        <button onclick="location.href='./menu.html';">Voir le Menu</button>
+                    </div>
+            </div>
+            <div class="diapo slide-2">
+                <video class="video-slide" src="../video/cokctail.mp4" autoplay muted loop></video>
+                <div class="caption">
+                    <h3>Sex on the beach</h3>
+                    <button onclick="location.href='./menu.html';">Voir le Menu</button>
+                </div>
+            </div>
+            <div class="diapo slide-3">
+                <video class="video-slide" src="../video/burrata.mp4" autoplay muted loop></video>
+                <div class="caption">
+                    <h3>burrata & tomates</h3>
+                    <button onclick="location.href='./menu.html';">Voir le Menu</button>
+                </div>
+            </div>
+            <div class="diapo slide-4">
+                <video class="video-slide" src="../video/saumon.mp4" autoplay muted loop></video>
+                <div class="caption">
+                    <h3>Pavé de saumon</h3>
+                    <button onclick="location.href='./menu.html';">Voir le Menu</button>
+                </div>
+            </div>
+            <div class="diapo slide-5">
+                <video class="video-slide" src="../video/soupe_fraise.mp4" autoplay muted loop></video>
+                <div class="caption">
+                    <h3>Soupe de fraises</h3>
+                    <button onclick="location.href='./menu.html';">Voir le Menu</button>
+                </div>
+            </div>
+            <div class="diapo slide-6">
+                <video class="video-slide" src="../video/coupe_mangue.mp4" autoplay muted loop></video>
+                <div class="caption">
+                    <h3>Coupe Mangue & Yaourt</h3>
+                    <button onclick="location.href='./menu.html';">Voir le Menu</button>
+                </div>
+            </div>
+            <div class="arrow r" onclick="next()">
+                <img src="../img/fleche_droite.png" alt="r">
+            </div>
+        </div>
+    
+        <script>
+            let slide = document.querySelectorAll('.diapo');
+            var current = 0;
+    
+            function cls(){
+                for(let i = 0; i < slide.length; i++){
+                        slide[i].style.display = 'none';
+                }
+            }
+    
+            function next(){
+                cls();
+                if(current === slide.length-1) current = -1;
+                current++;
+    
+                slide[current].style.display = 'block';
+                slide[current].style.opacity = 0.4;
+    
+                var x = 0.4;
+                var intX = setInterval(function(){
+                    x+=0.1;
+                    slide[current].style.opacity = x;
+                    if(x >= 1) {
+                        clearInterval(intX);
+                        x = 0.4;
+                    }
+                }, 100);
+    
+            }
+    
+            function prev(){
+                cls();
+                if(current === 0) current = slide.length;
+                current--;
+    
+                slide[current].style.display = 'block';
+                slide[current].style.opacity = 0.4;
+    
+                var x = 0.4;
+                var intX = setInterval(function(){
+                    x+=0.1;
+                    slide[current].style.opacity = x;
+                    if(x >= 1) {
+                        clearInterval(intX);
+                        x = 0.4;
+                    }
+                }, 100);
+    
+            }
+    
+            function start(){
+                cls();
+                slide[current].style.display = 'block';
+            }
+            start();
+        </script>
+        <div class="slides slide3">
+            <article class="main_slide2">
+                <img src="../img/diapo16.png" alt="">
+                <h2>Pourquoi Nous Choisir?</h2>
+                <p class ="textpkchosir"> Découvrez le Lagon Lounge, votre destination gastronomique en bord de mer à Théoule-sur-Mer, où la cuisine raffinée se marie à la beauté époustouflante de la Méditerranée. 
+                <br>Notre menu exquis propose une sélection de fruits de mer et de poissons frais, préparés avec soin pour offrir une expérience gustative exceptionnelle. Chaque plat est accompagné de vins finement sélectionnés pour sublimer chaque saveur.
+        
+                <br>Que vous veniez pour un déjeuner ensoleillé avec vue sur la mer ou pour un dîner romantique sous les étoiles, le Lagon Lounge est l'endroit idéal. Chaque bouchée est une invitation à un voyage sensoriel inoubliable.
+                    
+                    Rejoignez-nous pour une escapade culinaire ensoleillée au cœur de la Côte d’Azur !
+                </p>
+            </article>
+        </div>
+            <hr>
+        <div class="slides slide4">
+            <section class="main_slide3">
+                <div class="fav-head">
+                    <h3>Nos plats populaires</h3>
+                </div>
+                <div class="fav-food">
+                    <div class="item">
+                        <div>
+                            <img src="../img/mojitop1.jpg" alt="">
+                        </div>
+                        <h4> Mojito </h4>
+                        <p> Un mélange rafraîchissant de rhum, de menthe fraîche, de citron vert et d'eau pétillante, sucré juste comme il faut. Une invitation à la détente en toute élégance.</p>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="../img/saladecrevettep1.jpg"alt="">
+                        </div>
+                        <h4> Salade de crevettes </h4>
+                        <p>Une combinaison parfaite de crevettes juteuses, d'avocat crémeux et de légumes frais, rehaussée d'une vinaigrette citronnée pour une expérience gustative délicieusement équilibrée.</p>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="../img/diapo3.jpg" alt="">
+                        </div>
+                        <h4> Filet de bar</h4>
+                        <p>Découvrez la douceur du filet de bar, cuit à la perfection et nappé d'une sauce aux tomates fraîches, olives et câpres, servi avec du riz pilaf pour un voyage gustatif au cœur de la Provence.</p>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="../img/glacep1.jpg" alt="">
+                        </div>
+                        <h4> Sorbet aux profiteroles </h4>
+                        <p>Savourez la délicatesse de nos nos profiteroles aves son sorbet aux fruits rouges, avec des saveurs intenses de fraise, framboise et myrtille, pour une touche finale fruitée et rafraîchissante.</p>
+                    </div>
+                </div>
+                <div class="dsgn"></div>
+            </section>   
+        </div>
+        <div class="slides slide5">
+            <section class="letter">
+                <div class="letter-head">
+                    <h2>Subscribe <span>Newsletter</span></h2>
+                </div>
+                <div class="letter-input">
+                    <div>
+                        <input type="email" id ="emailInput" placeholder="Example@gmail.com">
+                    </div>
+                    <button class="red_btn" id="subscribeBtn">Subscribe</button>
+                </div>
+                <p id="message"></p>
+            </section>
+            <footer>
+                <div class="waves">
+                    <div class="wave" id="waves1"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="../html/accueil.html">Accueil</a></li>
+                    <li><a href="../html/menu.html">Menu</a></li>
+                    <li><a href="../html/reservations.html">Reservation</a></li>
+                    <li><a href="../html/avis.html">Avis</a></li>
+                    <li><a href="../html/recrutement.html">Recrutement</a></li>
+                    <li><a href="../html/contact.html">Contact</a></li>
+                </ul>
+                <div class="footer-content">
+                    <div class="bloc1">
+                        <p>Pour votre santé, pratiquez une activité physique régulière – <a href="https://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a></p>
+                    </div>
+                    <div class="bloc2">
+                        <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+                    </div>
+                </div>
+                <p>Email: <a href="mailto:lagoonLoung@gmail.com">lagonLounge@gmail.com</a></p>
+                <p>©️2024 David Verrier & Enzo Gonzalez<br/>Tous droits réservés.</p>
+            </footer>
+            
+            
+        </div>
+        
+    </div>
+
+    
+    
+   
+
+    <script type="text/javascript">
+        const logo = document.querySelector(".logo img");
+        const nav = document.querySelector(".navigation-items")
+        let content = document.querySelector(".home .content")
+    
+        window.addEventListener('load', () => {
+            logo.style.transform = "translateY(0)";
+            nav.style.transform = "translateY(0)";
+            setTimeout(() =>{
+                content.style.transform = "translateY(0)";
+                content.style.opacity = "1";
+            },500);
+        });
+    </script>
+    
+</body>
+</html>

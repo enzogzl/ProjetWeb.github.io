@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <script src="../js/barre.js" defer></script>
+    <script src="../js/subscribe.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+    <link rel="shortcut icon" href="../img/marche-aux-poissons.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="slides slide1">
+            <header>
+                <a href="../html/accueil.html" class="logo" ><img src="../img/logovf-png.png" alt="logo"></a>
+                <div class="navigation">
+                    <div class="navigation-items">
+                        <a href="../html/accueil.html">Accueil</a>
+                        <a href="../html/menu.html">Menu</a>
+                        <a href="../html/reservations.html">Réservation</a>
+                        <a href="../html/avis.html">Avis</a>
+                        <a href="../html/recrutement.html">Recrutement</a>
+                        <a href="../html/contact.html">Contact</a>
+                    </div>  
+                    <button id="menu-button" class="button-barre">
+                        <img src="../img/icons8-menu-50(1).png" alt="Menu" />
+                    </button>
+                    <button id="close-button" class="button-barre hidden">
+                        <img src="../img/icons8-close-50.png" alt="Fermer" />
+                    </button> 
+                </div>
+            </header>
+            <section class="home">
+                <video class="video-slide" src="../video/4611894-uhd_3840_2160_30fps.mp4" autoplay muted loop></video>
+                <div class="content">
+                    <h1>Contactez<br><span>Nous</span></h1>
+                    <p> N'hésitez pas nous sommes disponible de 10h à Minuit</p>
+                    <a href="../html/contact.html">Nous contacter</a>
+                </div>
+            </section>
+        </div>
+        <div class="slides slide2">
+            <div id="brochure">
+                <div class="decorative-line"></div>
+                <h1>Nos informations</h1>
+                <div class="decorative-line"></div>
+            </div>
+                <section class="contact-info">
+                    <h1>Contactez-nous</h1>
+                    <p>
+                        Adresse : <a href="https://www.google.com/maps/place/Crique+de+l'Aiguille/@43.5057895,6.9509042,17z/data=!3m1!4b1!4m6!3m5!1s0x12ce837cd1672acb:0x9b4af5c3260b2d33!8m2!3d43.5057856!4d6.9534791!16s%2Fg%2F11g9q7dpnd?entry=ttu">56 Bd de la Cor d'Or, 06590 Théoule-sur-Mer</a>
+                    </p>
+                    <p>Téléphone : <a href="tel:+33493000000">+33 4 93 00 00 00</a></p>
+                    <p>Email : <a href="mailto:contact@lelagonlounge.fr">contact@lelagonlounge.fr</a></p>
+                </section>
+                <section class="contact-form">
+                    <h2>Envoyez-nous un message</h2>
+                    <form action="submit_contact_form.php" method="post">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+                        
+                        <button type="button" id="envoyerButton">Envoyer</button>
+                    </form>
+                </section>
+        </div>
+        <div class="slides slide3">
+            <section class="map">
+                <h2>Où nous trouver</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.809063710861!2d6.950393176524629!3d43.506318561917716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce83005e60b333%3A0xcc2a41f8f9f07c6c!2sLe%20Lagon%20Lounge%20(Factice)!5e0!3m2!1sfr!2sfr!4v1716561165292!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+        </div>
+        <div class="slides slide5">
+            <section class="letter">
+                <div class="letter-head">
+                    <h2>Subscribe <span>Newsletter</span></h2>
+                </div>
+                <div class="letter-input">
+                    <div>
+                        <input type="email" id ="emailInput" placeholder="Example@gmail.com">
+                    </div>
+                    <button class="red_btn" id="subscribeBtn">Subscribe</button>
+                </div>
+                <p id="message"></p>
+            </section>
+            <footer>
+                <div class="waves">
+                    <div class="wave" id="waves1"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="../html/accueil.html">Accueil</a></li>
+                    <li><a href="../html/menu.html">Menu</a></li>
+                    <li><a href="../html/reservations.html">Reservation</a></li>
+                    <li><a href="../html/avis.html">Avis</a></li>
+                    <li><a href="../html/recrutement.html">Recrutement</a></li>
+                    <li><a href="../html/contact.html">Contact</a></li>
+                </ul>
+                <div class="footer-content">
+                    <div class="bloc1">
+                        <p>Pour votre santé, pratiquez une activité physique régulière – <a href="https://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a></p>
+                    </div>
+                    <div class="bloc2">
+                        <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+                    </div>
+                </div>
+                <p>Email: <a href="mailto:lagoonLoung@gmail.com">lagoonLoung@gmail.com</a></p>
+                <p>©️2024 David Verrier & Enzo Gonzalez<br/>Tous droits réservés.</p>
+            </footer>
+        </div>
+    </div>
+   
+
+    <script type="text/javascript">
+        const logo = document.querySelector(".logo img");
+        const nav = document.querySelector(".navigation-items")
+        let content = document.querySelector(".home .content")
+    
+        window.addEventListener('load', () => {
+            logo.style.transform = "translateY(0)";
+            nav.style.transform = "translateY(0)";
+            setTimeout(() =>{
+                content.style.transform = "translateY(0)";
+                content.style.opacity = "1";
+            },500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../js/avis.js" defer></script>
+    <script src="../js/barre.js" defer></script>
+    <script src="../js/etoiles.js" defer></script>
+    <link rel="shortcut icon" href="../img/marche-aux-poissons.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="../html/accueil.html" class="logo"><img src="../img/logovf-png.png" alt="logo"></a>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="../html/accueil.html">Accueil</a>
+                <a href="../html/menu.html">Menu</a>
+                <a href="../html/reservations.html">Réservation</a>
+                <a href="../html/avis.html">Avis</a>
+                <a href="../html/recrutement.html">Recrutement</a>
+                <a href="../html/contact.html">Contact</a>
+            </div>
+            <button id="menu-button" class="button-barre">
+                <img src="../img/icons8-menu-50(1).png" alt="Menu" />
+            </button>
+            <button id="close-button" class="button-barre hidden">
+                <img src="../img/icons8-close-50.png" alt="Fermer" />
+            </button>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide" src="../video/4328534-uhd_3840_2160_25fps.mp4" autoplay muted loop></video>
+        <div class="content">
+            <br>
+            <h1>Nos avis</h1>
+            <p>  <span id="typed-text"></span> </p>
+            <a href="../html/contact.html">Nous contacter</a>
+        </div>
+    </section>
+    <main>
+        <div id="avis-container">
+            <div class="avis">
+                <h3>Romain Dangin</h3>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>Un endroit magnifique avec une vue imprenable sur la mer. La nourriture était délicieuse et le service impeccable. Je recommande vivement ce restaurant de plage !</p>
+            </div>
+            <div class="avis">
+                <h3>Sandrine Laverre</h3>
+                <p>⭐️⭐️⭐️⭐️</p>
+                <p>Très beau restaurant avec une ambiance chaleureuse. Les plats étaient savoureux et le personnel très accueillant. Une belle découverte !</p>
+            </div>
+        </div>
+        <div id="avis-container"></div>
+        <form id="avis-form">
+            <h2>Ajouter un avis</h2>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" required>
+            <label for="note">Note :</label>
+            <div id="etoiles">
+                <span class="etoile" data-value="1">☆</span>
+                <span class="etoile" data-value="2">☆</span>
+                <span class="etoile" data-value="3">☆</span>
+                <span class="etoile" data-value="4">☆</span>
+                <span class="etoile" data-value="5">☆</span>
+            </div>
+            <input type="hidden" id="note" name="note" value="0" required>
+            <label for="commentaire">Commentaire :</label>
+            <textarea id="commentaire" required></textarea>
+            <button type="submit">Soumettre</button>
+            <br> <br> <br> <br> <br> <br> <br> <br>
+        </form>               
+    </main>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="waves1"></div>
+        </div>
+        <ul class="menu">
+            <li><a href="../html/accueil.html">Accueil</a></li>
+            <li><a href="../html/menu.html">Menu</a></li>
+            <li><a href="../html/reservations.html">Reservation</a></li>
+            <li><a href="../html/avis.html">Avis</a></li>
+            <li><a href="../html/recrutement.html">Recrutement</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-content">
+            <div class="bloc1">
+                <p>Pour votre santé, pratiquez une activité physique régulière – <a href="https://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a></p>
+            </div>
+            <div class="bloc2">
+                <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+            </div>
+        </div>
+        <p>Email: <a href="mailto:lagoonLoung@gmail.com">lagoonLoung@gmail.com</a></p>
+        <p>©️2024 David Verrier & Enzo Gonzalez<br/>Tous droits réservés.</p>
+    </footer>
+
+
+</body>
+</html>
